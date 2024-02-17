@@ -1,0 +1,25 @@
+:root {
+    --background-color: #E3E3E3;
+}
+
+main {
+    display         : flex;
+    justify-content : center;
+    align-items     : center;
+    flex-wrap       : wrap;
+    margin          : 0;
+}
+
+button {
+    margin: 1rem;
+}
+
+.button {
+    background-color: var(--background-color);
+    color           : #222;
+    padding         : .5em 1em;
+    border          : none;
+    outline         : none;
+    position        : relative;
+    cursor          : pointer;
+}

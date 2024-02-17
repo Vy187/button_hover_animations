@@ -9,22 +9,22 @@ export type ButtonType = {
 const initialState: ButtonType[] = [
     {
         'id'    : 1,
-        'class' : 'btn btn-border-pop',
+        'class' : 'button button-border-pop',
         'text'  : 'Border Pop'
     },
     {
         'id'    : 2,
-        'class' : 'btn btn-background-slide',
+        'class' : 'button button-background-slide',
         'text'  : 'Background Slide'
     },
     {
         'id'    : 3,
-        'class' : 'btn btn-background-circle',
+        'class' : 'button button-background-circle',
         'text'  : 'Background Circle'
     },
     {
         'id'    : 4,
-        'class' : 'btn btn-border-underline',
+        'class' : 'button button-border-underline',
         'text'  : 'Border Underline'
     }
 ];
