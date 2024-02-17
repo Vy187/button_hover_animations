@@ -3,9 +3,12 @@ import ReactDOM from 'react-dom/client';
 import App      from './App.tsx';
 import './index.css';
 
+import { ButtonsProvider } from './context/ButtonProvider.tsx';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <App />
+    <ButtonsProvider>
+      <App />
+    </ButtonsProvider>
   </React.StrictMode>,
 );
