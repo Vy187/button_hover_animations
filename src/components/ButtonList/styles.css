@@ -35,6 +35,7 @@ button {
     bottom      : 0;
     z-index     : -1;
     border      : var(--border-size) solid var(--background-color);
+
     transition  : top, left, right, bottom, 100ms ease-in-out;
 }
 
@@ -55,6 +56,7 @@ button {
     bottom          : 0;
     z-index         : -1;
     background-color: var(--accent-color);
+
     transition      : transform 300ms ease-in-out;
     transform       : scaleX(0);
     transform-origin: left;
@@ -72,5 +74,37 @@ button {
 
 .button.button-background-slide:hover,
 .button.button-background-slide:focus {
+    color: white;
+}
+
+.button.button-background-circle::before {
+    content         : '';
+    position        : absolute;
+    top             : 0;
+    left            : 0; 
+    right           : 0;
+    bottom          : 0;
+    z-index         : -1;
+    background-color: var(--background-color);
+    border-radius    : 50%;
+
+    transition      : transform 500ms ease-in-out;
+    transform       : scale(1.5); 
+}
+
+.button.button-background-circle:hover::before,
+.button.button-background-circle:focus::before {
+    transform: scale(0);
+}
+
+.button.button-background-circle {
+    transition      : color 500ms ease-in-out;
+    z-index         : 1;
+    overflow        : hidden;
+    background-color: var(--accent-color);
+}
+
+.button.button-background-color:hover,
+.button.button-background-color:focus {
     color: white;
 }
