@@ -108,3 +108,21 @@ button {
 .button.button-background-color:focus {
     color: white;
 }
+
+.button.button-border-underline::before {
+    content         : '';
+    position        : absolute;
+    left            : 0; 
+    right           : 0;
+    bottom          : 0;
+    height          : var(--border-size);
+    background-color: var(--accent-color); 
+
+    transition      : transform 300ms ease-in-out;
+    transform       : scaleX(0); 
+}
+
+.button.button-border-underline:hover::before,
+.button.button-border-underline:focus::before {
+    transform: scaleX(1);
+}
