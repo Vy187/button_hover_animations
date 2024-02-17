@@ -1,6 +1,7 @@
 :root {
     --background-color  : #E3E3E3;
     --border-size       : 2px;
+    --accent-color      : #0AF;
 }
 
 main {
@@ -32,7 +33,7 @@ button {
     left        : 0;
     right       : 0;
     bottom      : 0;
-    z-index     : 0;
+    z-index     : -1;
     border      : var(--border-size) solid var(--background-color);
     transition  : top, left, right, bottom, 100ms ease-in-out;
 }
@@ -43,4 +44,33 @@ button {
     left    : calc(var(--border-size) * -2);
     right   : calc(var(--border-size) * -2);
     bottom  : calc(var(--border-size) * -2);
+}
+
+.button.button-background-slide::before {
+    content         : '';
+    position        : absolute;
+    top             : 0;
+    left            : 0;
+    right           : 0;
+    bottom          : 0;
+    z-index         : -1;
+    background-color: var(--accent-color);
+    transition      : transform 300ms ease-in-out;
+    transform       : scaleX(0);
+    transform-origin: left;
+}
+
+.button.button-background-slide:hover::before,
+.button.button-background-slide:focus::before {
+    transform: scaleX(1);
+}
+
+.button.button-background-slide {
+    transition  : color 300ms ease-in-out;
+    z-index     : 1;
+}
+
+.button.button-background-slide:hover,
+.button.button-background-slide:focus {
+    color: white;
 }
